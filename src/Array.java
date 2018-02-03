@@ -82,8 +82,7 @@ public class Array {
 				occurrences++;
 			}
 		}
-	
-		System.out.println(number + "Found in Array " + occurrences + " times");
+		System.out.println(number + " in Array " + occurrences + " times");
 		return;
 	}
 	
