@@ -26,8 +26,6 @@ public class Dollars {
 		System.out.println("Quarters=" + quarterCents);
 		System.out.println("Dimes=" + dimeCents);
 		System.out.println("Cents=" + pennyCents);
-		
-
 	}
 
 }
