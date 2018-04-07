@@ -11,8 +11,9 @@ public class LinkedBagClient {
 		}
 		
 		System.out.println("Frequency " + linkedBag.getFrequencyOf(dataArr[0]));
-		
-		System.out.println("LinkedBag size " + linkedBag.toArray().length);
+		System.out.println("Remove first " + linkedBag.remove() );
+		System.out.println("Remove last " + linkedBag.remove(dataArr[2]));
+		//System.out.println("LinkedBag size " + linkedBag.toArray().length);
 
 	}
 

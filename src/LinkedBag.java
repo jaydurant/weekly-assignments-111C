@@ -8,6 +8,32 @@ public class LinkedBag<T> implements LinkedBagInterface<T> {
 		numberOfEntries= 0;
 	}
 	
+	public T remove() {
+		T result = null;
+		if(firstNode != null) {
+			result = firstNode.data;
+			firstNode = firstNode.next;
+			numberOfEntries--;
+		}
+		
+		return result;
+	}
+	
+	public boolean remove(T entry) {
+		Node entryNode = getReferenceTo(entry);
+		boolean result = false;
+		
+		if(entryNode != null) {
+			entryNode.data = firstNode.data;
+			firstNode = firstNode.next;
+			numberOfEntries--;
+			result = true;
+		}
+		
+		return result;
+	}
+	
+	
 	public boolean add(T entry) {
 		Node newNode = new Node(entry,firstNode);
 		firstNode = newNode;
@@ -28,6 +54,21 @@ public class LinkedBag<T> implements LinkedBagInterface<T> {
 		}
 		
 		return count;
+	}
+	
+	private Node getReferenceTo(T anEntry) {
+		boolean found = false;
+		Node currentNode = firstNode;
+		
+		while(!found && currentNode != null) {
+			if(anEntry.equals(currentNode.data)) {
+				found = true;
+			}else {
+				currentNode = currentNode.next;
+			}
+		}
+		
+		return currentNode;
 	}
 	
 	@SuppressWarnings("unchecked")
