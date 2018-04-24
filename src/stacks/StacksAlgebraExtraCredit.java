@@ -7,7 +7,6 @@ public class StacksAlgebraExtraCredit {
 		System.out.println(checkBalance("(1+2)+(1-3)"));
 		System.out.println(evaluatePostfix("34-5*"));
 		System.out.println(convertToPostFix("(1-3)/4"));
-
 	}
 	
 	public static boolean checkBalance(String expression) {
